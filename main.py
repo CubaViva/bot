@@ -45,7 +45,7 @@ def mag_magaz ():
     print("Перешли в маг магаз")
     time.sleep(random.randint(1, 3))
 
-# данные для посылки входа в алтарь Куба
+# данные для посылки входа в алтарь Куба заклинателя
 cuba = {
     'unick': 'CubaDaleko'
 }
@@ -75,7 +75,6 @@ def work_end (responce):
     src_cp_start = responce.find("\'m", src_cp)
     src_cp_end = responce.find("\'", src_cp_start + 1)
     return src_cp_end
-
 
 src_if = ""
 for n in range(work(mag_cuba()), work(mag_cuba()) + 8):
@@ -168,7 +167,6 @@ while src_if == "Работать":
         src_altar = cubamag_responce.find("Выберите предмет")
         src_altar_start = cubamag_responce.find("e=", src_altar+16)
         print(src_altar_start)
-
 
         work_responce = session.get(link_work, headers=header).text
         time.sleep(random.randint(5, 9))
