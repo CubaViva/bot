@@ -138,7 +138,7 @@ while src_if == "Работать":
         t = time.localtime() 
         current_time = time.strftime("%H:%M:%S", t) 
         print(current_time)
-        time.sleep(random.randint(502, 590))
+        # time.sleep(random.randint(502, 590))
         print(src_3)  
     
         cubamag_responce = session.post(link_cuba, data=cuba, headers=header).text
